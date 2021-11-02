@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/githubPagesHostedReact/static/css/main.98b43bea.chunk.css",
+    "main.js": "/githubPagesHostedReact/static/js/main.f79a7a74.chunk.js",
+    "main.js.map": "/githubPagesHostedReact/static/js/main.f79a7a74.chunk.js.map",
+    "runtime-main.js": "/githubPagesHostedReact/static/js/runtime-main.b0da6f51.js",
+    "runtime-main.js.map": "/githubPagesHostedReact/static/js/runtime-main.b0da6f51.js.map",
+    "static/css/2.5652ce18.chunk.css": "/githubPagesHostedReact/static/css/2.5652ce18.chunk.css",
+    "static/js/2.e3c957a9.chunk.js": "/githubPagesHostedReact/static/js/2.e3c957a9.chunk.js",
+    "static/js/2.e3c957a9.chunk.js.map": "/githubPagesHostedReact/static/js/2.e3c957a9.chunk.js.map",
+    "static/js/3.ceb32385.chunk.js": "/githubPagesHostedReact/static/js/3.ceb32385.chunk.js",
+    "static/js/3.ceb32385.chunk.js.map": "/githubPagesHostedReact/static/js/3.ceb32385.chunk.js.map",
+    "index.html": "/githubPagesHostedReact/index.html",
+    "static/css/2.5652ce18.chunk.css.map": "/githubPagesHostedReact/static/css/2.5652ce18.chunk.css.map",
+    "static/css/main.98b43bea.chunk.css.map": "/githubPagesHostedReact/static/css/main.98b43bea.chunk.css.map",
+    "static/js/2.e3c957a9.chunk.js.LICENSE.txt": "/githubPagesHostedReact/static/js/2.e3c957a9.chunk.js.LICENSE.txt",
+    "static/media/300.css": "/githubPagesHostedReact/static/media/roboto-vietnamese-300-normal.af9afdc1.woff2",
+    "static/media/400.css": "/githubPagesHostedReact/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
+    "static/media/500.css": "/githubPagesHostedReact/static/media/roboto-vietnamese-500-normal.b8e494da.woff2",
+    "static/media/700.css": "/githubPagesHostedReact/static/media/roboto-vietnamese-700-normal.3096f18a.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b0da6f51.js",
+    "static/css/2.5652ce18.chunk.css",
+    "static/js/2.e3c957a9.chunk.js",
+    "static/css/main.98b43bea.chunk.css",
+    "static/js/main.f79a7a74.chunk.js"
+  ]
+}
