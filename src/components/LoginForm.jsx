@@ -10,6 +10,12 @@ class LoginDialog extends Component {
           <Box p={5}>
             <FormGroup>
               <Box pb={2}>
+              <FormLabel style={{paddingRight: '47px'}}>
+                  {"URL:"}
+                </FormLabel>
+                <Input onKeyUp={(e) => {if(e.key === 'Enter') this.props.login()}} onChange={(e) => this.props.setURL(e.target.value)} value={this.props.url}/>
+              </Box>
+              <Box pb={2}>
                 <FormLabel>
                   {"Username: "}
                 </FormLabel>

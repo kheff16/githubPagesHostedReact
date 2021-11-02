@@ -15,6 +15,7 @@ class App extends Component {
       events: [],
       username:"",
       password:"",
+      url: "http://localhost:3000",
       needToLogin: true,
       streamToken: "",
       header: 'Chat',
@@ -32,7 +33,7 @@ class App extends Component {
       var form = new FormData();
       form.append("password", this.state.password);
       form.append("username", this.state.username);
-      request.open("POST", process.env.REACT_APP_BASE_URL + "/login");
+      request.open("POST", this.state.url + "/login");
       var that = this;
       request.onreadystatechange = function() {
           if (this.readyState !== 4) return;
@@ -58,7 +59,7 @@ class App extends Component {
     }
 
     serve(){
-      const server = new EventSource(`${process.env.REACT_APP_BASE_URL}/stream/${this.state.streamToken}`);
+      const server = new EventSource(`${this.state.url}/stream/${this.state.streamToken}`);
       server.addEventListener("Part", (event) =>{
         event = {...JSON.parse(event.data), type: 'Part'}
         var temp = this.state.userList
@@ -121,6 +122,9 @@ class App extends Component {
     setPassword(value){
       this.setState({password: value})
     }
+    setURL(value){
+      this.setState({url: value})
+    }
 
     disconnect(){
       this.setState(prevState => ({needToLogin: true, messageToken: "", streamToken: "", userList: []}))
@@ -136,7 +140,7 @@ class App extends Component {
           <AppBar style={{textAlign: 'center'}}>{'Log In to View Chat'}</AppBar>
         </header>
         <p>Not logged in</p>
-        <LoginForm setUsername={this.setUsername} setPassword={this.setPassword} needToLogin={this.state.needToLogin} serve={this.serve} login={this.login} username={this.state.username} password={this.state.password}/>
+        <LoginForm url={this.state.url} setURL={this.setURL} setUsername={this.setUsername} setPassword={this.setPassword} needToLogin={this.state.needToLogin} serve={this.serve} login={this.login} username={this.state.username} password={this.state.password}/>
       </>
       ) : (
       <>
@@ -148,7 +152,7 @@ class App extends Component {
           <Grid item xs={8} md={8}>
             <Paper style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'column'}}>
               <MessageList events={this.state.events}/>
-              <Compose needToLogin={this.state.needToLogin}/>
+              <Compose url={this.state.url} needToLogin={this.state.needToLogin}/>
             </Paper>
           </Grid>
           <Grid item xs={4} md={4}>

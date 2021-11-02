@@ -16,7 +16,7 @@ export class Compose extends Component {
     
         var request = new XMLHttpRequest();
         // request.open("POST", sessionStorage.getItem("url") + "/message");
-        request.open("POST", process.env.REACT_APP_BASE_URL + "/message");
+        request.open("POST", this.props.url + "/message");
         request.setRequestHeader(
             "Authorization",
             "Bearer " + messageToken
